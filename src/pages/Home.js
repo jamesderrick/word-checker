@@ -64,8 +64,12 @@ function Home() {
 
     return (
         <>
-        <h1 style={{textAlign: 'center', padding: '20px'}}>Word Check</h1>
-        <div style={{minHeight: '60px', fontSize: '36px', textAlign: 'center'}}>
+        <div style={{width: '390px', margin: 'auto'}}>
+            <Stack direction="horizontal" className="mx-auto mb-1 justify-content-center">
+                <h1 style={{textAlign: 'center', padding: '20px'}}>Word Check</h1>
+            </Stack>
+        </div>
+        <div style={{width: '390px', minHeight: '60px', fontSize: '36px', textAlign: 'center', margin: 'auto'}}>
             {search.split("").map((char,index) => {
                 return (
                     <div 
@@ -96,18 +100,20 @@ function Home() {
         {results.length > 0 ?
             <Results data={results} style={{margin: '0 10'}} />
             :
-            <div style={{textAlign: 'center', width: '300px', margin: 'auto'}}>
-                <p>
-                    Enter your word and click Search
-                    <br/>
-                    Use ? as a wildcard
-                </p>
+            <div style={{width: '390px', margin: 'auto'}}>
+                <Stack direction="horizontal" className="mx-auto mb-1 justify-content-center">
+                    <p style={{textAlign: 'center'}}>
+                        Enter your word and click Search
+                        <br/>
+                        Use ? as a wildcard
+                    </p>
+                </Stack>
             </div>
         }
         </>
         }
-        <div style={{position: 'absolute', bottom: 50, left: 0, right: 0}}>
-            <div style={{position: 'relative', marginBottom: '20px', width: '400px', margin: 'auto'}}>
+        <div style={{position: 'absolute', bottom: 0, left: 0, right: 0}}>
+            <div style={{position: 'relative', marginBottom: '20px', width: '390px', margin: 'auto'}}>
                 <Stack direction="horizontal" className="mx-auto mb-1 justify-content-end">
                     <Button 
                         name="reset" 
